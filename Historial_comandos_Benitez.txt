@@ -1,0 +1,61 @@
+cd repogit/
+ls -l
+git clone git@github.com:dalluna2011-byte/TP1_AySO_Benitez_Dalma.git
+cd TP1_AySO_Benitez_Dalma/
+pwd
+ls -l
+cat /etc/os-release
+man grep
+grep HOME_URL /etc/os-release
+grep home_url /etc/os-release
+grep -i home_url /etc/os-release
+grep -i home_url /etc/os-release > datos_url.txt
+ls -l
+cat datos_url.txt 
+whoami
+echo "Usuario=$(whoami)"
+echo "Usuario=$(whoami)" > datos_usuario.txt
+cat datos_usuario.txt 
+git config user.name "dalluna2011-byte"
+git config user.email "dalluna2011@gmail.com"
+git config user.name
+git add .
+git commit -m "ADD: agregado 1er ejercicio sobre datos_usuario.txt"
+git status
+git push
+ls -la ~/.ssh/
+GIT_SSH_COMMAND='ssh -i ~/.ssh/id_ed25519_dalma -o IdentitiesOnly=yes' git push
+grep "model name" /proc/cpuinfo | head -n1 >> datos_usuario.txt
+cat datos_usuario.txt 
+git add .
+git commit -m "feat: Añadiendo información de CPU"
+GIT_SSH_COMMAND='ssh -i ~/.ssh/id_ed25519_dalma -o IdentitiesOnly=yes' git push
+git status
+fdf
+cat <<EOF >> README.md
+Alumno: Dalma Benitez
+Division: 212
+Turno: Tarde
+EOF
+
+cat README.md 
+git add .
+git commit -m "ADD: Añadiendo Readme y datos del usuario"
+GIT_SSH_COMMAND='ssh -i ~/.ssh/id_ed25519_dalma -o IdentitiesOnly=yes' git push
+mkdir -p ~/materia{1,2}/uni{1,2,3}
+tree
+cd ../..
+tree
+cd repogit/TP1_AySO_Benitez_Dalma/
+cat <<EOF > script_dir.sh
+mkdir -p ~/materia{1,2}/uni{1,2,3}
+EOF
+
+cat script_dir.sh 
+ls -l
+chmod 775 script_dir.sh 
+ls -l
+git add .
+git commit -m "ADD: Añadiendo script"
+GIT_SSH_COMMAND='ssh -i ~/.ssh/id_ed25519_dalma -o IdentitiesOnly=yes' git push
+history -a
